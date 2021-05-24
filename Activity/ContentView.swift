@@ -8,43 +8,38 @@
 import SwiftUI
 
 struct ContentView: View {
+  private var osItems = [
+    Item(
+      key: "Version",
+      value: ProcessInfo.processInfo.operatingSystemVersionString
+    ),
+  ]
+  
+  private var deviceItems = [
+    Item(
+      key: "Processors",
+      value: String(ProcessInfo.processInfo.processorCount)
+    ),
+    Item(
+      key: "Currently Active Processors",
+      value: String(ProcessInfo.processInfo.activeProcessorCount)
+    ),
+    Item(
+      key: "Physical Memory",
+      value: String(ProcessInfo.processInfo.physicalMemory),
+      unit: "bytes"
+    ),
+    Item(
+      key: "System Uptime",
+      value: String(ProcessInfo.processInfo.systemUptime),
+      unit: "seconds"
+    ),
+  ]
+  
   var body: some View {
     VStack(alignment: .leading, spacing: 10) {
-      Group {
-        Text("OS Information")
-          .font(.title)
-          .fontWeight(.semibold)
-        KeyValueRow(
-          key: "Version",
-          value:ProcessInfo.processInfo.operatingSystemVersionString
-        )
-        Divider()
-      }
-      
-      Group {
-        Text("Device Information")
-          .font(.title)
-          .fontWeight(.semibold)
-        KeyValueRow(
-          key: "Processors",
-          value: String(ProcessInfo.processInfo.processorCount)
-        )
-        KeyValueRow(
-          key: "Currently Active Processors",
-          value: String(ProcessInfo.processInfo.activeProcessorCount)
-        )
-        KeyValueRow(
-          key: "Physical Memory",
-          value: String(ProcessInfo.processInfo.physicalMemory),
-          unit: "bytes"
-        )
-        KeyValueRow(
-          key: "System Uptime",
-          value: String(ProcessInfo.processInfo.systemUptime),
-          unit: "seconds"
-        )
-        Divider()
-      }
+      InfoSection(headerText: "OS Information", items: osItems)
+      InfoSection(headerText: "Device Information", items: deviceItems, isLast: true)
     }
     .padding()
   }

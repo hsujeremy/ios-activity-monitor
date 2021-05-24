@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3F7A62B3265B3EB800BF851E /* KeyValueRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A62B2265B3EB800BF851E /* KeyValueRow.swift */; };
+		3F7A62B5265B44FD00BF851E /* InfoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A62B4265B44FD00BF851E /* InfoSection.swift */; };
+		3F7A62B7265B4D2F00BF851E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A62B6265B4D2F00BF851E /* Item.swift */; };
 		3F90742C265AEFA80047BA18 /* ActivityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F90742B265AEFA80047BA18 /* ActivityApp.swift */; };
 		3F90742E265AEFA80047BA18 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F90742D265AEFA80047BA18 /* ContentView.swift */; };
 		3F907430265AEFAA0047BA18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F90742F265AEFAA0047BA18 /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		3F7A62B2265B3EB800BF851E /* KeyValueRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueRow.swift; sourceTree = "<group>"; };
+		3F7A62B4265B44FD00BF851E /* InfoSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSection.swift; sourceTree = "<group>"; };
+		3F7A62B6265B4D2F00BF851E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		3F907428265AEFA80047BA18 /* Activity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Activity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F90742B265AEFA80047BA18 /* ActivityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityApp.swift; sourceTree = "<group>"; };
 		3F90742D265AEFA80047BA18 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,10 +103,12 @@
 			children = (
 				3F90742B265AEFA80047BA18 /* ActivityApp.swift */,
 				3F90742D265AEFA80047BA18 /* ContentView.swift */,
+				3F7A62B4265B44FD00BF851E /* InfoSection.swift */,
 				3F90742F265AEFAA0047BA18 /* Assets.xcassets */,
 				3F907434265AEFAA0047BA18 /* Info.plist */,
 				3F907431265AEFAA0047BA18 /* Preview Content */,
 				3F7A62B2265B3EB800BF851E /* KeyValueRow.swift */,
+				3F7A62B6265B4D2F00BF851E /* Item.swift */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -262,7 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F7A62B7265B4D2F00BF851E /* Item.swift in Sources */,
 				3F7A62B3265B3EB800BF851E /* KeyValueRow.swift in Sources */,
+				3F7A62B5265B44FD00BF851E /* InfoSection.swift in Sources */,
 				3F90742E265AEFA80047BA18 /* ContentView.swift in Sources */,
 				3F90742C265AEFA80047BA18 /* ActivityApp.swift in Sources */,
 			);
