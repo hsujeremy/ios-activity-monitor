@@ -8,9 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+  private var item1 = "Item 1"
+  private var item2 = "Item 2"
+  private var item3 = "Item 3"
+  
   var body: some View {
-    Text("Hello, world!")
-      .padding()
+    VStack(alignment: .leading, spacing: 10) {
+      Text("First Header")
+        .font(.title)
+        .fontWeight(.semibold)
+      Text(item1)
+      Text(item2)
+      
+      Divider()
+      
+      Text("Second Header")
+        .font(.title)
+        .fontWeight(.semibold)
+      Text(item3)
+    }
+    .padding()
   }
 }
 
