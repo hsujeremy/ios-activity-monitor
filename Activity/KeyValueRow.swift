@@ -10,14 +10,16 @@ import SwiftUI
 struct KeyValueRow: View {
   private var key: String
   private var value: String
+  private var unit: String
   
-  init(key: String, value: String) {
+  init(key: String, value: String, unit: String = "") {
     self.key = key;
     self.value = value;
+    self.unit = unit;
   }
   
   var body: some View {
-    Text("\(key): \(value)")
+    Text("\(key): \(value) \(unit)")
   }
 }
 

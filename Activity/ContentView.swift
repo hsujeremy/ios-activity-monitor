@@ -35,11 +35,13 @@ struct ContentView: View {
         )
         KeyValueRow(
           key: "Physical Memory",
-          value: String(ProcessInfo.processInfo.physicalMemory)
+          value: String(ProcessInfo.processInfo.physicalMemory),
+          unit: "bytes"
         )
         KeyValueRow(
           key: "System Uptime",
-          value: String(ProcessInfo.processInfo.systemUptime)
+          value: String(ProcessInfo.processInfo.systemUptime),
+          unit: "seconds"
         )
         Divider()
       }
