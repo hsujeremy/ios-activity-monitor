@@ -17,15 +17,16 @@ struct ContentView: View {
       Text("First Header")
         .font(.title)
         .fontWeight(.semibold)
-      Text(item1)
-      Text(item2)
+      KeyValueRow(key: "Key1", value: "Value1")
+      KeyValueRow(key: "Key2", value: "Value2")
       
       Divider()
       
       Text("Second Header")
         .font(.title)
         .fontWeight(.semibold)
-      Text(item3)
+      KeyValueRow(key: "Key3", value: "Value3")
+      KeyValueRow(key: "Key4", value: "Value4")
     }
     .padding()
   }
