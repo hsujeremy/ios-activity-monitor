@@ -31,7 +31,7 @@ struct ContentView: View {
     ),
     Item(
       key: "System Uptime",
-      value: String(ProcessInfo.processInfo.systemUptime),
+      value: String(format: "%.2f", ProcessInfo.processInfo.systemUptime),
       unit: "seconds"
     ),
   ]
@@ -39,7 +39,11 @@ struct ContentView: View {
   var body: some View {
     VStack(alignment: .leading, spacing: 10) {
       InfoSection(headerText: "OS Information", items: osItems)
-      InfoSection(headerText: "Device Information", items: deviceItems, isLast: true)
+      InfoSection(
+        headerText: "Device Information",
+        items: deviceItems,
+        isLast: true
+      )
     }
     .padding()
   }
