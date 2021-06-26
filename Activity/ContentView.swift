@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-  private var osItems = [
+  var osItems = [
     Item(
       key: "Version",
       value: ProcessInfo.processInfo.operatingSystemVersionString
     ),
   ]
   
-  private var deviceItems = [
+  var deviceItems = [
     Item(
       key: "Processors",
       value: String(ProcessInfo.processInfo.processorCount)
@@ -44,6 +44,34 @@ struct ContentView: View {
         items: deviceItems,
         isLast: true
       )
+      
+      switch ProcessInfo.processInfo.thermalState {
+      case .nominal:
+        Text("Thermal State: ") +
+        Text("Nominal")
+          .fontWeight(.medium)
+          .foregroundColor(.green)
+      case .fair:
+        Text("Thermal State: ") +
+        Text("Fair")
+          .fontWeight(.medium)
+          .foregroundColor(.yellow)
+      case .serious:
+        Text("Thermal State: ") +
+        Text("Serious")
+          .fontWeight(.medium)
+          .foregroundColor(.orange)
+      case.critical:
+        Text("Thermal State: ") +
+        Text("Critical")
+          .fontWeight(.medium)
+          .foregroundColor(.red)
+      @unknown default:
+        Text("Thermal State: ") +
+        Text("Unknown")
+          .fontWeight(.medium)
+          .foregroundColor(.gray)
+      }
     }
     .padding()
   }
